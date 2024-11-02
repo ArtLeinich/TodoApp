@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Todo List Application
 
-## Getting Started
+A simple, responsive Todo List application built with Next.js and TypeScript, designed to help users organize their tasks efficiently.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- ✨ **Add New Task:** Create tasks with a title, category, and priority
+- 📝 **Edit Task:** Modify the title, category, and priority of existing tasks
+- ✅ **Mark as Completed/Uncompleted:** Toggle task status with visual feedback
+- 🗑️ **Delete Task:** Remove tasks from the list
+
+## 🛠️ Technologies Used
+
+- **Next.js** - React framework for server-side rendering
+- **TypeScript** - For type safety across the codebase
+- **Prisma** - Database ORM for managing tasks
+- **React Icons** - Enhanced UI with modern icons
+- **Tailwind CSS** - Utility-first CSS framework
+
+## 📁 Project Structure
+
+```
+app/
+├── actions/           # Server actions
+│   └── todo/         # Task-related operations
+├── page.tsx          # Main Todo List page
+│
+components/
+├── ui/               # Shared UI components
+└── shared/           # Task operation components
+    ├── AddTodo
+    ├── EditTodo
+    ├── DeleteTodo
+    └── ChangeTodo
+
+types/                # TypeScript types
+utils/                # Utility files
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js (v14 or higher)
+- npm or yarn
+- PostgreSQL database
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Set up environment**
+   
+   Create a `.env` file in the root directory:
+   ```env
+   DATABASE_URL="your_database_url"
+   ```
 
-## Deploy on Vercel
+4. **Run Prisma migrations**
+   ```bash
+   npx prisma migrate dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Visit `http://localhost:3000` to see the application running.
+
+## 💡 Usage
+
+1. **Adding a Task**
+   - Enter task title
+   - Select category and priority
+   - Click "Add"
+
+2. **Managing Tasks**
+   - ✅ Click "Mark as Completed" to toggle task status
+   - 📝 Use the edit icon to modify tasks
+   - 🗑️ Click the trash icon to delete tasks
+
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
