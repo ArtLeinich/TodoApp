@@ -8,9 +8,10 @@ interface InputProps {
   placeholder?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
 }
 
-const Input: React.FC<InputProps> = ({ name, type = "text", placeholder, value, onChange }) => {
+const Input: React.FC<InputProps> = ({ name, type = "text", placeholder, value, onChange, className }) => {
   return (
     <input
       name={name}
@@ -18,7 +19,7 @@ const Input: React.FC<InputProps> = ({ name, type = "text", placeholder, value, 
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className="border p-2 rounded w-full"
+      className={`border p-2 rounded ${className}`}
     />
   );
 };

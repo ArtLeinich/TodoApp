@@ -26,7 +26,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
         onChange={onChange}
         className="border rounded p-2"
       >
-        <option value="">Выберите</option>
+        <option value="">Select</option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
